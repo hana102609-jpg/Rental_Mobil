@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rental Mobil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1>🚗 Rental Sinar jaya</h1>
+</header>
+
+<section class="hero">
+  <h2>Temukan Mobil Terbaik Anda</h2>
+  <input type="text" id="cari" placeholder="Cari mobil...">
+  <select id="filter">
+    <option value="all">Semua</option>
+    <option value="Sedan">Sedan</option>
+    <option value="SUV">SUV</option>
+  </select>
+</section>
+
+<section class="container">
+  <h2>Daftar Mobil</h2>
+
+  <div id="listMobil" class="grid">
+
+    <!-- 1 -->
+    <div class="card"
+      data-nama="Toyota Camry"
+      data-tipe="Sedan"
+      data-harga="650000"
+      data-status="true"
+      data-rating="4.8"
+      data-deskripsi="Sedan premium nyaman untuk perjalanan jauh dan bisnis"
+      data-spesifikasi="2.5L | Automatic | 5 seat | 15 km/l">
+      <img src="images/Toyota Camry.webp">
+      <h3>Toyota Camry</h3>
+      <p>Sedan</p>
+      <p class="harga">Rp 650000</p>
+      <button onclick="app.pilihMobil('Toyota Camry')">Pilih</button>
+    </div>
+
+    <!-- 2 -->
+    <div class="card"
+      data-nama="Honda CR-V"
+      data-tipe="SUV"
+      data-harga="700000"
+      data-status="false"
+      data-rating="4.7"
+      data-deskripsi="SUV keluarga dengan kabin luas dan nyaman"
+      data-spesifikasi="1.5L Turbo | CVT | 5 seat">
+      <img src="images/honda cvr.webp">
+      <h3>Honda CR-V</h3>
+      <p>SUV</p>
+      <p class="harga">Rp 700000</p>
+      <button disabled>Tidak Tersedia</button>
+    </div>
+
+    <!-- 3 -->
+    <div class="card"
+      data-nama="BMW X5"
+      data-tipe="SUV"
+      data-harga="1200000"
+      data-status="true"
+      data-rating="4.9"
+      data-deskripsi="SUV mewah performa tinggi"
+      data-spesifikasi="3.0L Turbo | AWD | 5 seat">
+      <img src="images/BMW X5.jpg">
+      <h3>BMW X5</h3>
+      <p>SUV</p>
+      <p class="harga">Rp 1200000</p>
+      <button onclick="app.pilihMobil('BMW X5')">Pilih</button>
+    </div>
+
+    <!-- 4 -->
+    <div class="card"
+      data-nama="Tesla Model 3"
+      data-tipe="Sedan"
+      data-harga="900000"
+      data-status="true"
+      data-rating="4.8"
+      data-deskripsi="Mobil listrik modern dan efisien"
+      data-spesifikasi="Electric | 400 km range | Autopilot">
+      <img src="images/tesla.jpg">
+      <h3>Tesla Model 3</h3>
+      <p>Sedan</p>
+      <p class="harga">Rp 900000</p>
+      <button onclick="app.pilihMobil('Tesla Model 3')">Pilih</button>
+    </div>
+
+    <!-- 5 -->
+    <div class="card"
+      data-nama="Mazda CX-5"
+      data-tipe="SUV"
+      data-harga="750000"
+      data-status="true"
+      data-rating="4.6"
+      data-deskripsi="SUV sporty dan nyaman"
+      data-spesifikasi="2.5L | Automatic | 5 seat">
+      <img src="images/2021 Mazda CX-5.jpg">
+      <h3>Mazda CX-5</h3>
+      <p>SUV</p>
+      <p class="harga">Rp 750000</p>
+      <button onclick="app.pilihMobil('Mazda CX-5')">Pilih</button>
+    </div>
+
+    <!-- 6 -->
+    <div class="card"
+      data-nama="Fortuner"
+      data-tipe="SUV"
+      data-harga="850000"
+      data-status="true"
+      data-rating="4.7"
+      data-deskripsi="SUV tangguh untuk segala medan"
+      data-spesifikasi="2.4L Diesel | 7 seat | 4x4">
+      <img src="images/fortuner.jpg">
+      <h3>Fortuner</h3>
+      <p>SUV</p>
+      <p class="harga">Rp 850000</p>
+      <button onclick="app.pilihMobil('Fortuner')">Pilih</button>
+    </div>
+
+    <!-- 7 -->
+    <div class="card"
+      data-nama="Pajero"
+      data-tipe="SUV"
+      data-harga="900000"
+      data-status="true"
+      data-rating="4.7"
+      data-deskripsi="SUV bertenaga dan stabil"
+      data-spesifikasi="2.4L Diesel | 7 seat | 4WD">
+      <img src="images/pajero.jpg">
+      <h3>Pajero</h3>
+      <p>SUV</p>
+      <p class="harga">Rp 900000</p>
+      <button onclick="app.pilihMobil('Pajero')">Pilih</button>
+    </div>
+
+    <!-- 8 -->
+    <div class="card"
+      data-nama="Hyundai Ioniq"
+      data-tipe="Sedan"
+      data-harga="800000"
+      data-status="true"
+      data-rating="4.8"
+      data-deskripsi="Mobil listrik futuristik"
+      data-spesifikasi="Electric | 380 km range">
+      <img src="images/Hyundai Ioniq 5 N.jpg">
+      <h3>Hyundai Ioniq</h3>
+      <p>Sedan</p>
+      <p class="harga">Rp 800000</p>
+      <button onclick="app.pilihMobil('Hyundai Ioniq')">Pilih</button>
+    </div>
+
+    <!-- 9 -->
+    <div class="card"
+      data-nama="Suzuki Ertiga"
+      data-tipe="Sedan"
+      data-harga="500000"
+      data-status="true"
+      data-rating="4.5"
+      data-deskripsi="Mobil keluarga hemat dan nyaman"
+      data-spesifikasi="1.5L | 7 seat | 16 km/l">
+      <img src="images/Suzuki Ertiga Mild-Hybrid 2022 Meluncur di India, Apa Saja yang Berubah_.jpg">
+      <h3>Suzuki Ertiga</h3>
+      <p>Sedan</p>
+      <p class="harga">Rp 500000</p>
+      <button onclick="app.pilihMobil('Suzuki Ertiga')">Pilih</button>
+    </div>
+
+    <!-- 10 -->
+    <div class="card"
+      data-nama="Honda Civic"
+      data-tipe="Sedan"
+      data-harga="600000"
+      data-status="true"
+      data-rating="4.7"
+      data-deskripsi="Sedan sporty dan stylish"
+      data-spesifikasi="1.5L Turbo | CVT | Digital cluster">
+      <img src="images/2023 Honda Civic.jpg">
+      <h3>Honda Civic</h3>
+      <p>Sedan</p>
+      <p class="harga">Rp 600000</p>
+      <button onclick="app.pilihMobil('Honda Civic')">Pilih</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="Rental">
+  <h2>Rental</h2>
+  <input type="text" id="nama" placeholder="Nama">
+  <input type="date" id="mulai">
+  <input type="date" id="kembali">
+  <button onclick="buatRental()">Rental</button>
+</section>
+
+<section>
+  <h2>Data Rental</h2>
+  <div id="listRental"></div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    <h2 id="modalNama"></h2>
+    <p id="modalTipe"></p>
+    <p id="modalHarga"></p>
+    <p id="modalDeskripsi"></p>
+    <p id="modalSpesifikasi"></p>
+    <div id="modalRating" class="stars"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
